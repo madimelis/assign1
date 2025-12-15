@@ -19,8 +19,8 @@ public class Hospital {
     @Override
     public String toString() {
         return "Hospital: " +
-                " Name: " + name +
-                ", Location: " + location +
-                ", Capacity: " + capacity;
+                "Name: " + name +
+                "; Location: " + location +
+                "; Capacity: " + capacity;
     }
 }

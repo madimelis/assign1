@@ -4,10 +4,10 @@ public class Doctor {
     private String specialization;
     private int expYears;
 
-    public Doctor(int id, String fullName, String specialization, int expYears) {
+    public Doctor(int id, String fullName, String speciality, int expYears) {
         this.id = id;
         this.fullName = fullName;
-        this.specialization = specialization;
+        this.specialization = speciality;
         this.expYears = expYears;
     }
 
@@ -23,9 +23,9 @@ public class Doctor {
     @Override
     public String toString() {
         return "Doctor: " +
-                " ID: " + id +
-                ", Name: " + fullName +
-                ", Specialization: " + specialization +
-                ", Experience: " + expYears;
+                "ID: " + id +
+                "; Name: " + fullName +
+                "; Specialization: " + specialization +
+                "; Experience: " + expYears;
     }
 }

@@ -6,6 +6,10 @@ public class Main {
         Doctor doctor2 = new Doctor(2, "Charles Pepper", "Surgeon", 20);
         Hospital hospital = new Hospital("W Clinic", "Astana", 350);
 
-
+        System.out.println(patient1);
+        System.out.println(patient2);
+        System.out.println(doctor1);
+        System.out.println(doctor2);
+        System.out.println(hospital);
     }
 }
