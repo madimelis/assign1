@@ -11,5 +11,19 @@ public class Main {
         System.out.println(doctor1);
         System.out.println(doctor2);
         System.out.println(hospital);
+
+        if (patient1.getAge() > patient2.getAge()) {
+            System.out.println(patient1.getFullName() + " is older than " + patient2.getFullName());
+        }
+        else {
+            System.out.println(patient2.getFullName() + " id older than " + patient1.getFullName());
+        }
+
+        if (doctor1.getExpYears() > doctor2.getExpYears()) {
+            System.out.println(doctor1.getFullName() + " has more experience than " + doctor2.getFullName());
+        }
+        else {
+            System.out.println(doctor2.getFullName() + "has more experience than " + doctor1.getFullName());
+        }
     }
 }
