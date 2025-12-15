@@ -26,7 +26,7 @@ public class Main {
             System.out.println(doctor1.getFullName() + " has more experience than " + doctor2.getFullName());
         }
         else {
-            System.out.println(doctor2.getFullName() + "has more experience than " + doctor1.getFullName());
+            System.out.println(doctor2.getFullName() + " has more experience than " + doctor1.getFullName());
         }
     }
 }
