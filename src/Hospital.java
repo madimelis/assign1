@@ -16,4 +16,11 @@ public class Hospital {
     public int getCapacity() {return capacity;}
     public void setCapacity(int capacity) {this.capacity = capacity;}
 
+    @Override
+    public String toString() {
+        return "Hospital: " +
+                " Name: " + name +
+                ", Location: " + location +
+                ", Capacity: " + capacity;
+    }
 }
