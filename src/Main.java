@@ -8,9 +8,12 @@ public class Main {
 
         System.out.println(patient1);
         System.out.println(patient2);
+        System.out.println();
         System.out.println(doctor1);
         System.out.println(doctor2);
+        System.out.println();
         System.out.println(hospital);
+        System.out.println();
 
         if (patient1.getAge() > patient2.getAge()) {
             System.out.println(patient1.getFullName() + " is older than " + patient2.getFullName());
