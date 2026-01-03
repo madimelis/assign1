@@ -1,25 +1,22 @@
-public class Doctor {
-    private int id;
-    private String fullName;
+public class Doctor extends Person{
     private String specialization;
     private int expYears;
 
     public Doctor(int id, String fullName, String speciality, int expYears) {
-        this.id = id;
-        this.fullName = fullName;
+        super(id, fullName);
         this.specialization = speciality;
         this.expYears = expYears;
     }
 
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
-    public String getFullName() {return fullName;}
-    public void setFullName(String fullName) {this.fullName = fullName;}
     public String getSpecialization() {return specialization;}
     public void setSpecialization(String specialization) {this.specialization = specialization;}
     public int getExpYears() {return expYears;}
     public void setExpYears(int expYears) {this.expYears = expYears;}
 
+    @Override
+    public String getRole() {
+        return "Doctor";
+    }
     @Override
     public String toString() {
         return "Doctor: " +
@@ -27,5 +24,15 @@ public class Doctor {
                 "; Name: " + fullName +
                 "; Specialization: " + specialization +
                 "; Experience: " + expYears;
+    }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Doctor)) return false;
+        Doctor doctor = (Doctor) o;
+        return getId() == doctor.getId();
+    }
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(getId());
     }
 }

@@ -1,29 +1,23 @@
-public class Patient {
-    private int id;
-    private String fullName;
+public class Patient extends Person{
     private int age;
     private String diagnosis;
 
     public Patient(int id, String fullName, int age, String diagnosis) {
-        this.id = id;
-        this.fullName = fullName;
+        super(id, fullName);
         this.age = age;
         this.diagnosis = diagnosis;
     }
 
-   public void setId(int id) {
-        this.id = id;
-   }
-   public int getId(){
-        return id;
-   }
-    public String getFullName() {return fullName;}
-    public void setFullName(String name) {this.fullName = fullName;}
+
     public int getAge() {return age;}
     public void setAge(int age) {this.age = age;}
     public String getDiagnosis() {return diagnosis;}
     public void setDiagnosis() {this.diagnosis = diagnosis;}
 
+    @Override
+    public String getRole(){
+        return "Patient";
+    }
     @Override
     public String toString() {
         return "Patient: " +
@@ -31,5 +25,16 @@ public class Patient {
                 "; Name: " + fullName +
                 "; Age: " + age +
                 "; Diagnosis: " + diagnosis;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if(!(o instanceof Patient)) return false;
+        Patient patient = (Patient) o;
+        return getId() == patient.getId();
+    }
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(getId());
     }
 }
