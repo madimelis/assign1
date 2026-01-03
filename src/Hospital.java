@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hospital {
     private String name;
     private String location;
     private int capacity;
+
+    private List<Person> people = new ArrayList<>();
 
     public Hospital(String name, String location, int capacity) {
         this.name = name;
@@ -15,6 +20,10 @@ public class Hospital {
     public void setLocation(String location) {this.location = location;}
     public int getCapacity() {return capacity;}
     public void setCapacity(int capacity) {this.capacity = capacity;}
+
+    public void addPerson(Person person) {
+        people.add(person);
+    }
 
     @Override
     public String toString() {
