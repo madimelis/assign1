@@ -40,6 +40,14 @@ public class Hospital {
             }
         }
     }
+    public void showPatients() {
+        for (Person p : people) {
+            if (p instanceof Patient) {
+                System.out.println(p);
+            }
+        }
+    }
+
     public void sortByName() {
         people.sort((a, b) -> a.getFullName().compareTo(b.getFullName()));
     }

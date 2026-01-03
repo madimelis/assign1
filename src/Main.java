@@ -1,32 +1,45 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Patient patient1 = new Patient(1, "Alam Arman", 20, "Food poisoning");
-        Patient patient2 = new Patient(2, "John Pork", 35, "Flu");
-        Doctor doctor1 = new Doctor(1, "John Watson", "Therapist", 7);
-        Doctor doctor2 = new Doctor(2, "Charles Pepper", "Surgeon", 20);
+        Scanner scanner = new Scanner(System.in);
         Hospital hospital = new Hospital("W Clinic", "Astana", 350);
+        System.out.print("How many patients to enter? ");
+        int patientnum = scanner.nextInt();
+        scanner.nextLine();
 
-        System.out.println(patient1);
-        System.out.println(patient2);
-        System.out.println();
-        System.out.println(doctor1);
-        System.out.println(doctor2);
-        System.out.println();
-        System.out.println(hospital);
-        System.out.println();
-
-        if (patient1.getAge() > patient2.getAge()) {
-            System.out.println(patient1.getFullName() + " is older than " + patient2.getFullName());
-        }
-        else {
-            System.out.println(patient2.getFullName() + " id older than " + patient1.getFullName());
+        for (int i = 1; i <= patientnum; i++) {
+            System.out.print("Enter patient name: ");
+            String name = scanner.nextLine();
+            System.out.print("Enter age: ");
+            int age = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Enter diagnosis: ");
+            String diagnosis = scanner.nextLine();
+            hospital.addPerson(new Patient(i, name, age, diagnosis));
+            System.out.println();
         }
 
-        if (doctor1.getExpYears() > doctor2.getExpYears()) {
-            System.out.println(doctor1.getFullName() + " has more experience than " + doctor2.getFullName());
+        System.out.print("How many doctors to enter? ");
+        int docnum = scanner.nextInt();
+        for (int i = 1; i <= docnum; i++) {
+            scanner.nextLine();
+            System.out.print("Enter doctor name: ");
+            String doc_name = scanner.nextLine();
+            System.out.print("Enter specialization: ");
+            String specialization = scanner.nextLine();
+            System.out.print("Enter years of experience: ");
+            int expYears = scanner.nextInt();
+            scanner.nextLine();
+            hospital.addPerson(new Doctor(i, doc_name, specialization, expYears));
+            System.out.println();
         }
-        else {
-            System.out.println(doctor2.getFullName() + " has more experience than " + doctor1.getFullName());
-        }
+
+        System.out.println("All Patients:");
+        hospital.showPatients();
+        System.out.println();
+
+        System.out.println("All Doctors:");
+        hospital.showDoctors();
+        System.out.println();
     }
 }
