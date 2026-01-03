@@ -11,8 +11,12 @@ public class Patient {
         this.diagnosis = diagnosis;
     }
 
-    public int getId(){ return id;}
-    public void setId(int id) {this.id = id;}
+   public void setId(int id) {
+        this.id = id;
+   }
+   public int getId(){
+        return id;
+   }
     public String getFullName() {return fullName;}
     public void setFullName(String name) {this.fullName = fullName;}
     public int getAge() {return age;}
