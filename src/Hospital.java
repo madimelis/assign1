@@ -25,6 +25,24 @@ public class Hospital {
         people.add(person);
     }
 
+    public Person findById(int id) {
+        for (Person p : people) {
+            if (p.getId() == id) {
+                return p;
+            }
+        }
+        return null;
+    }
+    public void showDoctors() {
+        for (Person p : people) {
+            if (p instanceof Doctor) {
+                System.out.println(p);
+            }
+        }
+    }
+    public void sortByName() {
+        people.sort((a, b) -> a.getFullName().compareTo(b.getFullName()));
+    }
     @Override
     public String toString() {
         return "Hospital: " +

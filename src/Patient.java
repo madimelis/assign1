@@ -21,8 +21,8 @@ public class Patient extends Person{
     @Override
     public String toString() {
         return "Patient: " +
-                 "ID: " + id +
-                "; Name: " + fullName +
+                 "ID: " + getId() +
+                "; Name: " + getFullName() +
                 "; Age: " + age +
                 "; Diagnosis: " + diagnosis;
     }

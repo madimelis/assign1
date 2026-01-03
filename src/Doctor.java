@@ -20,8 +20,8 @@ public class Doctor extends Person{
     @Override
     public String toString() {
         return "Doctor: " +
-                "ID: " + id +
-                "; Name: " + fullName +
+                "ID: " + getId() +
+                "; Name: " + getFullName() +
                 "; Specialization: " + specialization +
                 "; Experience: " + expYears;
     }
