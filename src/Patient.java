@@ -11,7 +11,7 @@ public class Patient extends Person{
     public int getAge() {return age;}
     public void setAge(int age) {this.age = age;}
     public String getDiagnosis() {return diagnosis;}
-    public void setDiagnosis() {this.diagnosis = diagnosis;}
+    public void setDiagnosis(String diagnosis) {this.diagnosis = diagnosis;}
 
     @Override
     public String getRole(){
@@ -24,16 +24,4 @@ public class Patient extends Person{
                 "; Name: " + getFullName() +
                 "; Age: " + age +
                 "; Diagnosis: " + diagnosis;
-    }
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if(!(o instanceof Patient)) return false;
-        Patient patient = (Patient) o;
-        return getId() == patient.getId();
-    }
-    @Override
-    public int hashCode() {
-        return Integer.hashCode(getId());
-    }
-}
+   }

@@ -29,7 +29,7 @@ public class Main {
             String specialization = scanner.nextLine();
             System.out.print("Enter years of experience: ");
             int expYears = scanner.nextInt();
-            scanner.nextLine();
+            //scanner.nextLine();
             hospital.addPerson(new Doctor(i, doc_name, specialization, expYears));
             System.out.println();
         }
@@ -37,9 +37,27 @@ public class Main {
         System.out.println("All Patients:");
         hospital.showPatients();
         System.out.println();
+        System.out.println();
 
         System.out.println("All Doctors:");
         hospital.showDoctors();
         System.out.println();
+
+        Doctor bestDoc = null;
+        Patient oldest = null;
+
+        for (Person p : hospital.getPeople()) {
+            if (p instanceof Doctor d && (bestDoc == null || d.getExpYears() > bestDoc.getExpYears()))
+                bestDoc = d;
+
+            if (p instanceof Patient pat && (oldest == null || pat.getAge() > oldest.getAge()))
+                oldest = pat;
+        }
+
+        System.out.println("Most experienced doctor: " + bestDoc);
+        System.out.println("Oldest patient: " + oldest);
+
+
+
     }
 }

@@ -47,6 +47,7 @@ public class Hospital {
             }
         }
     }
+    public List<Person> getPeople() { return people; }
 
     public void sortByName() {
         people.sort((a, b) -> a.getFullName().compareTo(b.getFullName()));

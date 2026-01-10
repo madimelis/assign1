@@ -25,6 +25,7 @@ public class Doctor extends Person{
                 "; Specialization: " + specialization +
                 "; Experience: " + expYears;
     }
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Doctor)) return false;
