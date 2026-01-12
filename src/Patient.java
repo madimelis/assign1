@@ -25,3 +25,4 @@ public class Patient extends Person{
                 "; Age: " + age +
                 "; Diagnosis: " + diagnosis;
    }
+}
