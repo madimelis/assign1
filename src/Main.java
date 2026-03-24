@@ -56,8 +56,5 @@ public class Main {
 
         System.out.println("Most experienced doctor: " + bestDoc);
         System.out.println("Oldest patient: " + oldest);
-
-
-
     }
 }
